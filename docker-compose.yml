@@ -1,0 +1,14 @@
+version: '2.1'
+
+services:
+  tmp:
+    image: node:10
+    build: .
+    environment:
+      NODE_ENV: production
+    working_dir: /usr/src/app
+    volumes: 
+      - ./:/usr/src/app
+    ports:
+      - 1234:1234
+    command: yarn dev
