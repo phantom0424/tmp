@@ -5,7 +5,7 @@ var detectDom = document.getElementById('detect');
 var itemList = ['ipad', 'iphone', 'android', 'wechat'];
 for (item of itemList) {
     var itemDom = document.createElement('div');
-    itemDom.append('is ' + item + ': ')
-    itemDom.append(md.is('wechat'))
+    itemDom.append('is d' + item + ': ')
+    itemDom.append(md.is(item))
     detectDom.appendChild(itemDom)
 }
