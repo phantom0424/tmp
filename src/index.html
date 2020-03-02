@@ -5,18 +5,249 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>传而习-app下载</title>
     <link rel="shortcut icon" href="../favicon.ico">
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container-fluid {
+            background-image: linear-gradient(215deg, #11C1E8 0%, #7C1DDB 100%);
+            text-align: center;
+            padding-top: 68px;
+            padding-bottom: 45px;
+            padding-left: 0;
+            padding-right: 0;
+
+            min-height: 100vh;
+        }
+
+        .container-fluid.parent {
+            padding: 0;
+            background-image: linear-gradient(0deg, #00DE8D 1%, #00C325 100%);
+        }
+
+        .container-fluid.parent .underscore {
+            padding-top: 68px;
+            padding-bottom: 45px;
+            background-image: url("./assets/images/家长端底纹@1x.png");
+            background-size: contain;
+            background-position-y: bottom;
+            background-repeat: no-repeat;
+        }
+
+        .container-fluid.student {
+            background-image: linear-gradient(0deg, #FFD70F 0%, #FE8C1B 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container-fluid.student .circle {
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .logo img {
+            width: 13vw;
+        }
+
+        .title {
+            opacity: 0.9;
+            font-family: PingFangSC-Semibold;
+            font-size: 4rem;
+            color: #FFFFFF;
+            letter-spacing: -2px;
+            margin-top: 26px;
+        }
+
+        .subtitle {
+            opacity: 0.85;
+            font-family: PingFangSC-Medium;
+            font-size: 1.5rem;
+            color: #FFFFFF;
+            letter-spacing: 0;
+        }
+
+        .tmp {
+            margin-top: 60px;
+            margin-bottom: 42px;
+        }
+
+        .tmp img {
+            width: 62.5vw;
+        }
+
+        .qrcode {
+            display: inline-block;
+        }
+
+        .qrcode .left, .qrcode .right {
+            display: inline-block;
+            vertical-align: middle;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .qrcode button {
+            width: 124px;
+            border-radius: 22px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+
+        .product img {
+            width: 90vw;
+            max-width: 505px;
+        }
+
+        .nav {
+            text-align: center;
+            justify-content: center;
+            margin-top: -100px;
+            height: 100px;
+        }
+
+        .nav .btn {
+            width: 108px;
+            height: 49px;
+            opacity: 0.9;
+            background: #03002D;
+            border-radius: 24px;
+
+            font-family: PingFangSC-Medium;
+            font-size: 21px;
+            color: #FFFFFF;
+            letter-spacing: -0.5px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .nav.new {
+            margin-top: 0;
+        }
+
+        .nav.new .btn {
+            border-top-left-radius: 0%;
+            border-top-right-radius: 0%;
+            font-size: 18px;
+            background: #002908;
+            opacity: 0.5;
+            letter-spacing: -0.3px;
+        }
+
+        .nav.new .btn.active {
+            font-size: 24px;
+            color: #21EA9D;
+            opacity: 0.9;
+            height: 62px;
+        }
+
+        .nav.new .btn.active:first-child {
+            color: #05BCF8;;
+        }
+
+        .nav.new .btn.active:last-child {
+            color: #FFD510;
+        }
+    </style>
 </head>
 <body>
-    下载首页
-    <div class="qrcode">
-        <canvas id="qrcode-teacher"></canvas>
+    <div class="container-fluid main">
+        <div class="logo"><img src="./assets/images/LOGO@1x.png" alt=""></div>
+        <div class="title">
+            <span>学而时习之，不亦说乎！</span>
+            <div class="subtitle">
+                <span>让每一份作业都传递着老师父母悉心的爱和关怀</span>
+            </div>
+        </div>
+        <div class="tmp"><img src="./assets/images/首页图@1x.png" alt=""></div>
+        <div style="height: 50px;"></div>
     </div>
-    <div class="qrcode">
-        <canvas id="qrcode-parent"></canvas>
+    <div class="nav" style="z-index: 9999;">
+        <button type="button" class="btn btn-dark nav-item">教师端</button>
+        <button type="button" class="btn btn-dark nav-item">家长端</button>
+        <button type="button" class="btn btn-dark nav-item">学生端</button>
     </div>
-    <div class="qrcode">
-        <canvas id="qrcode-student"></canvas>
+    <div class="container-fluid teacher hook-item" id="teacher">
+        <div class="title">
+            <span>教师端</span>
+            <div class="subtitle">
+                <span>尊重老师传统批改习惯，实现作业高效流转统计</span>
+            </div>
+        </div>
+        <div class="product">
+            <img src="./assets/images/教师端@1x.png" alt="">
+        </div>
+        <div class="qrcode">
+            <div class="left">
+                <!-- <canvas id="qrcode-teacher"></canvas> -->
+                <img src="./assets/images/qrcode_teacher.png" alt="">
+            </div>
+            <div class="right">
+                <div><button class="btn btn-outline-light">iPad</button></div>
+                <div><button class="btn btn-outline-light">iPhone</button></div>
+            </div>
+        </div>
     </div>
+    <div class="container-fluid parent hook-item" id="parent">
+        <div class="underscore">
+            <div class="title">
+                <span>家长端</span>
+                <div class="subtitle">
+                    <span>简洁呈现孩子作业情况，辅助达成家校共育培优</span>
+                </div>
+            </div>
+            <div class="product">
+                <img src="./assets/images/家长端@1x.png" alt="">
+            </div>
+            <div class="qrcode">
+                <div class="left">
+                    <!-- <canvas id="qrcode-parent"></canvas> -->
+                    <img src="./assets/images/qrcode_parent.png" alt="" srcset="">
+                </div>
+                <div class="right">
+                    <div><button class="btn btn-outline-light">Android</button></div>
+                    <div><button class="btn btn-outline-light">iPhone</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid student hook-item" id="student">
+        <div class="circle" style="background: rgba(255,255,255,0.15); width: 22.8vw; height: 22.8vw; left: -5vw; top: -6vw;"></div>
+        <div class="circle" style="background: rgba(255,255,255,0.15); width: 28.1vw; height: 28.1vw; left: -6vw; top: -7vw;"></div>
+        <div class="circle" style="background: rgba(255,255,255,0.20); width: 12vw; height: 12vw; left: 355px; top: 632px;"></div>
+        <div class="circle" style="background: rgba(255,255,255,0.15); width: 3.2vw; height: 3.2vw; left: 1347px; top: 238px;"></div>
+        <div class="circle" style="background: rgba(255,255,255,0.2); width: 36.7vw; height: 36.7vw; left: 1426px; top: 735px;"></div>
+        <div class="circle" style="background: rgba(255,255,255,0.15); width: 45.3vw; height: 45.3vw; left: 1347px; top: 647px;"></div>
+
+        <div class="title">
+            <span>学生端</span>
+            <div class="subtitle">
+                <span>精准辅导互学一触即达，错题跟踪提升学习效率</span>
+            </div>
+        </div>
+        <div class="product">
+            <img src="./assets/images/学生端@1x.png" alt="">
+        </div>
+        <div class="qrcode">
+            <div class="left">
+                <!-- <canvas id="qrcode-student"></canvas> -->
+                <img src="./assets/images/qrcode_student.png" alt="">
+            </div>
+            <div class="right">
+                <div><button class="btn btn-outline-light">iPad</button></div>
+                <div><button class="btn btn-outline-light">iPhone</button></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
     <script src="./index.js"></script>
+    <script src="./fixedScroll.js"></script>
+    <script>
+        function onNavClick () {
+            // document.getElementsByClassName('buttons')[0].
+        }
+        $(".nav").fixedScroll({
+            navEls: $(".nav-item"),
+            hookEls: $('.hook-item'),
+            // hookOffset: 100
+        });
+    </script>
 </body>
 </html>
