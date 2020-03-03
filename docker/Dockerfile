@@ -1,10 +1,10 @@
 FROM node:10.13-alpine as builder
-ENV NODE_ENV production
+# ENV NODE_ENV production
 WORKDIR /usr/src/app
-COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
-RUN npm install --production --silent
+COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "yarn.lock", ".npmrc", "./"]
+RUN npm install
 COPY . .
-CMD npm run build
+RUN npm run build && sed -i 's/relativepath/./g' dist/*.html
 
 FROM httpd:2.4
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
