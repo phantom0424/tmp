@@ -6,185 +6,146 @@
     <title>传而习-app下载</title>
     <link rel="shortcut icon" href="../favicon.ico">
     <link href="https://cdn.bootcss.com/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/pagePiling.js/1.5.6/jquery.pagepiling.min.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="./assets/css/bootstrap.min.css"> -->
-    <style>
-        .container-fluid {
-            background-image: linear-gradient(215deg, #11C1E8 0%, #7C1DDB 100%);
-            text-align: center;
-            padding-top: 68px;
-            padding-bottom: 45px;
-            padding-left: 0;
-            padding-right: 0;
-
-            min-height: 100vh;
-        }
-
-        .container-fluid.main {
-            padding-top: 0;
-        }
-
-        .teacher .product {
-            margin-bottom: 50px;
-        }
-
-        .container-fluid.parent {
-            padding: 0;
-            background-image: linear-gradient(0deg, #00DE8D 1%, #00C325 100%);
-        }
-
-        .container-fluid.parent .underscore {
-            padding-top: 68px;
-            padding-bottom: 45px;
-            background-image: url("./assets/images/家长端底纹@1x.png");
-            background-size: contain;
-            background-position-y: bottom;
-            background-repeat: no-repeat;
-        }
-
-        .container-fluid.student {
-            background-image: linear-gradient(0deg, #FFD70F 0%, #FE8C1B 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .container-fluid.student .circle {
-            border-radius: 50%;
-            position: absolute;
-        }
-
-        .logo .logo-wrapper {
-            display: inline-block;
-            width: 18.5rem;
-            height: 7.5rem;
-            background: rgba(3,0,45,0.45);
-            border-radius: 1.5rem;
-            padding-top: 1.5rem;
-            border-top-left-radius: 0;
-            border-top-right-radius: 0;
-        }
-
-        .logo img {
-            width: 15.5rem;
-        }
-
-        .title {
-            opacity: 0.9;
-            font-family: PingFangSC-Semibold;
-            font-size: 4.5rem;
-            color: #FFFFFF;
-            letter-spacing: -2px;
-            margin-top: 26px;
-        }
-
-        .title-wrapper .subtitle {
-            opacity: 0.85;
-            font-family: PingFangSC-Medium;
-            color: #FFFFFF;
-            letter-spacing: 0;
-        }
-
-        .tmp {
-            margin-top: 60px;
-            margin-bottom: 42px;
-        }
-
-        .tmp img {
-            width: 62.5vw;
-        }
-
-        .qrcode {
-            display: inline-block;
-        }
-
-        .qrcode .left, .qrcode .right {
-            display: inline-block;
-            vertical-align: middle;
-            padding-left: 5px;
-            padding-right: 5px;
-        }
-
-        .qrcode button {
-            width: 124px;
-            border-radius: 22px;
-            margin-top: 8px;
-            margin-bottom: 8px;
-        }
-
-        .product img {
-            width: 90vw;
-            max-width: 505px;
-        }
-
-        .nav {
-            text-align: center;
-            justify-content: center;
-            margin-top: -100px;
-            height: 100px;
-        }
-
-        .nav .btn {
-            width: 6.75rem;
-            height: 3rem;
-            opacity: 0.9;
-            background: #03002D;
-            border-radius: 1.5rem;
-
-            font-family: PingFangSC-Medium;
-            font-size: 1.3rem;
-            color: #FFFFFF;
-            letter-spacing: -0.5px;
-            margin-left: 5px;
-            margin-right: 5px;
-        }
-
-        .nav.new {
-            margin-top: 0;
-        }
-
-        .nav.new .btn {
-            border-top-left-radius: 0%;
-            border-top-right-radius: 0%;
-            font-size: 1.125rem;
-            background: #002908;
-            opacity: 0.5;
-            letter-spacing: -0.3px;
-        }
-
-        .nav.new .btn.active {
-            font-size: 1.5rem;
-            color: #21EA9D;
-            opacity: 0.9;
-            height: 3.875rem;
-        }
-
-        .nav.new .btn.active:first-child {
-            color: #05BCF8;;
-        }
-
-        .nav.new .btn.active:last-child {
-            color: #FFD510;
-        }
-
-        @media (max-width: 575.98px) {
-            html {
-                font-size: 62.5%;
-            }
-
-            .title {
-                font-size: 3.2rem;
-            }
-        }
-
-
-        @media (min-width: 576px) and (max-width: 1199.98px) {
-            .title {
-                font-size: 4rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="./index.css">
 </head>
-<body>
-    <div class="container-fluid main">
+<body>  
+    <div id="pagepiling">
+        <div class="section main">
+            <div class="logo">
+                <div class="logo-wrapper">
+                    <img src="./assets/images/LOGO@1x.png" alt="">
+                </div>
+            </div>
+            <div class="title-wrapper">
+                <p class="h1 title">学而时习之，不亦说乎！</p>
+                <p class="h4 subtitle">让每一份作业都传递着老师父母悉心的爱和关怀</p>
+            </div>
+            <div class="tmp"><img src="./assets/images/首页图@1x.png" alt=""></div>
+            <div id="myMenu" class="btn-toolbar nav" role="toolbar" aria-label="Toolbar with button groups">
+                <div data-menuanchor="secondPage" class="btn-group mr-2" role="group" aria-label="First group">
+                    <a class="btn btn-dark nav-item" role="button" href="#secondPage">教师端</a>
+                </div>
+                <div data-menuanchor="thirdPage" class="btn-group mr-2" role="group" aria-label="Second group">
+                    <a class="btn btn-dark nav-item" role="button" href="#thirdPage">家长端</a>
+                </div>
+                <div data-menuanchor="fourthPage" class="btn-group" role="group" aria-label="Third group">
+                    <a class="btn btn-dark nav-item" role="button" href="#fourthPage">学生端</a>
+                </div>
+              </div>
+            <!-- <ul id="myMenu">
+                <li data-menuanchor="secondPage"><a class="btn btn-dark nav-item" role="button" href="#secondPage">教师端</a></li>
+                <li data-menuanchor="thirdPage"><a class="btn btn-dark nav-item" role="button" href="#thirdPage">家长端</a></li>
+                <li data-menuanchor="fourthPage"><a class="btn btn-dark nav-item" role="button" href="#fourthPage">学生端</a></li>
+            </ul> -->
+                <!-- <div style="height: 50px;"></div> -->
+        </div>
+        <div class="section teacher">
+            <div class="vertical-bar"></div>
+            <div class="vertical-bar"></div>
+            <div class="vertical-bar"></div>
+            <div class="vertical-bar"></div>
+
+            <div class="title-wrapper">
+                <p class="h1 title">教师端</p>
+                <p class="h4 subtitle">尊重老师传统批改习惯，实现作业高效流转统计</p>
+            </div>
+            <div class="product-wrapper">
+                <div class="product">
+                    <img src="./assets/images/教师端@1x.png" alt="">
+                    <div class="badge-wrapper">
+                        <span class="badge badge-pill badge-success">高效化流转</span>
+                        <span class="badge badge-pill badge-success">原笔记批阅</span>
+                        <span class="badge badge-pill badge-success">个性化点评</span>
+                        <span class="badge badge-pill badge-success">多手段辅导</span>
+                        <span class="badge badge-pill badge-success">智能化统计</span>
+                    </div>
+                </div>
+            </div>
+            <div class="qrcode">
+                <div class="left">
+                    <img src="./assets/images/qrcode_teacher.png" alt="">
+                </div>
+                <div class="right">
+                    <div><button class="btn btn-outline-light">iPad</button></div>
+                    <div><button class="btn btn-outline-light">iPhone</button></div>
+                </div>
+            </div>
+
+            <div class="down-guide">
+                <button type="button" class="btn btn-link" onclick="moveDown()">
+                </button>
+            </div>
+        </div>
+        <div class="section parent">
+            <div class="background"></div>
+            <div class="title-wrapper">
+                <p class="h1 title">家长端</p>
+                <p class="h4 subtitle">简洁呈现孩子作业情况，辅助达成家校共育培优</p>
+            </div>
+            <div class="product-wrapper">
+                <div class="product">
+                    <img src="./assets/images/家长端@1x.png" alt="">
+                    <div class="badge-wrapper">
+                        <span class="badge badge-pill badge-success">知彼此的呵护</span>
+                        <span class="badge badge-pill badge-success">无困惑的引导</span>
+                        <span class="badge badge-pill badge-success">好习惯的养成</span>
+                        <span class="badge badge-pill badge-success">看得见的进步</span>
+                        <span class="badge badge-pill badge-success">无障碍的大爱</span>
+                    </div>
+                </div>
+            </div>
+            <div class="qrcode">
+                <div class="left">
+                    <img src="./assets/images/qrcode_parent.png" alt="" srcset="">
+                </div>
+                <div class="right">
+                    <div><button class="btn btn-outline-light">Android</button></div>
+                    <div><button class="btn btn-outline-light">iPhone</button></div>
+                </div>
+            </div>
+            <div class="down-guide">
+                <button type="button" class="btn btn-link" onclick="moveDown()">
+                </button>
+            </div>
+        </div>
+        <div class="section student">
+            <div class="circle" style="background: rgba(255,255,255,0.15); width: 22.8vw; height: 22.8vw; left: -5vw; top: -6vw;"></div>
+            <div class="circle" style="background: rgba(255,255,255,0.15); width: 28.1vw; height: 28.1vw; left: -6vw; top: -7vw;"></div>
+            <div class="circle" style="background: rgba(255,255,255,0.20); width: 12vw; height: 12vw; left: 18.5vw; top: 52vh;"></div>
+            <div class="circle" style="background: rgba(255,255,255,0.15); width: 3.2vw; height: 3.2vw; left: 70vw; top: 20vh;"></div>
+            <div class="circle" style="background: rgba(255,255,255,0.2); width: 36.7vw; height: 36.7vw; left: 74vw; top: 60vh;"></div>
+            <div class="circle" style="background: rgba(255,255,255,0.15); width: 45.3vw; height: 45.3vw; left: 70vw; top: 54vh;"></div>
+
+            <div class="title-wrapper">
+                <p class="h1 title">学生端</p>
+                <p class="h4 subtitle">精准辅导互学一触即达，错题跟踪提升学习效率</p>
+            </div>
+            <div class="product-wrapper">
+                <div class="product">
+                    <img src="./assets/images/学生端@1x.png" alt="">
+                    <div class="badge-wrapper">
+                        <span class="badge badge-pill badge-success">传统式答题</span>
+                        <span class="badge badge-pill badge-success">便捷性提交</span>
+                        <span class="badge badge-pill badge-success">精准化帮辅</span>
+                        <span class="badge badge-pill badge-success">高效化互学</span>
+                        <span class="badge badge-pill badge-success">贴心式排错</span>
+                    </div>
+                </div>
+            </div>
+            <div class="qrcode">
+                <div class="left">
+                    <img src="./assets/images/qrcode_student.png" alt="">
+                </div>
+                <div class="right">
+                    <div><button class="btn btn-outline-light">iPad</button></div>
+                    <div><button class="btn btn-outline-light">iPhone</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="container-fluid main">
         <div class="logo">
             <div class="logo-wrapper">
                 <img src="./assets/images/LOGO@1x.png" alt="">
@@ -196,13 +157,13 @@
         </div>
         <div class="tmp"><img src="./assets/images/首页图@1x.png" alt=""></div>
         <div style="height: 50px;"></div>
-    </div>
-    <div class="nav" style="z-index: 9999;">
+    </div> -->
+    <!-- <div class="nav" style="z-index: 9999;">
         <button type="button" class="btn btn-dark nav-item">教师端</button>
         <button type="button" class="btn btn-dark nav-item">家长端</button>
         <button type="button" class="btn btn-dark nav-item">学生端</button>
-    </div>
-    <div class="container-fluid teacher hook-item" id="teacher">
+    </div> -->
+    <!-- <div class="container-fluid teacher hook-item" id="teacher">
         <div class="title">
             <p class="h1">教师端</p>
             <p class="h4 subtitle">尊重老师传统批改习惯，实现作业高效流转统计</p>
@@ -212,7 +173,6 @@
         </div>
         <div class="qrcode">
             <div class="left">
-                <!-- <canvas id="qrcode-teacher"></canvas> -->
                 <img src="./assets/images/qrcode_teacher.png" alt="">
             </div>
             <div class="right">
@@ -220,8 +180,8 @@
                 <div><button class="btn btn-outline-light">iPhone</button></div>
             </div>
         </div>
-    </div>
-    <div class="container-fluid parent hook-item" id="parent">
+    </div> -->
+    <!-- <div class="container-fluid parent hook-item" id="parent">
         <div class="underscore">
             <div class="title">
                 <p class="h1">家长端</p>
@@ -232,7 +192,6 @@
             </div>
             <div class="qrcode">
                 <div class="left">
-                    <!-- <canvas id="qrcode-parent"></canvas> -->
                     <img src="./assets/images/qrcode_parent.png" alt="" srcset="">
                 </div>
                 <div class="right">
@@ -241,8 +200,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container-fluid student hook-item" id="student">
+    </div> -->
+    <!-- <div class="container-fluid student hook-item" id="student">
         <div class="circle" style="background: rgba(255,255,255,0.15); width: 22.8vw; height: 22.8vw; left: -5vw; top: -6vw;"></div>
         <div class="circle" style="background: rgba(255,255,255,0.15); width: 28.1vw; height: 28.1vw; left: -6vw; top: -7vw;"></div>
         <div class="circle" style="background: rgba(255,255,255,0.20); width: 12vw; height: 12vw; left: 355px; top: 632px;"></div>
@@ -259,7 +218,6 @@
         </div>
         <div class="qrcode">
             <div class="left">
-                <!-- <canvas id="qrcode-student"></canvas> -->
                 <img src="./assets/images/qrcode_student.png" alt="">
             </div>
             <div class="right">
@@ -267,19 +225,31 @@
                 <div><button class="btn btn-outline-light">iPhone</button></div>
             </div>
         </div>
-    </div>
+    </div> -->
     <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/pagePiling.js/1.5.6/jquery.pagepiling.min.js"></script>
     <script src="./index.js"></script>
-    <script src="./fixedScroll.js"></script>
+    <!-- <script src="./fixedScroll.js"></script> -->
     <script>
         function onNavClick () {
             // document.getElementsByClassName('buttons')[0].
         }
-        $(".nav").fixedScroll({
-            navEls: $(".nav-item"),
-            hookEls: $('.hook-item'),
-            // hookOffset: 100
+        // $(".nav").fixedScroll({
+        //     navEls: $(".nav-item"),
+        //     hookEls: $('.hook-item'),
+        //     // hookOffset: 100
+        // });
+        $(document).ready(function() {
+            $('#pagepiling').pagepiling({
+                anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+                menu: '#myMenu'
+            });
         });
+
+        function moveDown () {
+            console.log(247)
+            $.fn.pagepiling.moveSectionDown();
+        }
     </script>
 </body>
 </html>

@@ -1,0 +1,335 @@
+.section {
+    background: #fff;
+    text-align: center;
+}
+
+.main {
+    background-image: linear-gradient(215deg, #11C1E8 0%, #7C1DDB 100%);
+}
+
+.main .wrapper {
+    height: 100%;
+}
+
+.main .logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -9.25rem;
+}
+
+.main .logo .logo-wrapper {
+    display: inline-block;
+    width: 18.5rem;
+    height: 7rem;
+    background: rgba(3,0,45,0.45);
+    border-radius: 1.5rem;
+    padding-top: 1rem;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.main .logo img {
+    width: 15.5rem;
+}
+
+.teacher {
+    background-image: linear-gradient(1deg, #02BBF8 0%, #001CDB 100%);
+}
+
+.teacher .wrapper, .teacher .background, .teacher .vertical-bar {
+    height: 100%;
+}
+
+.teacher .wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.teacher .vertical-bar {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.teacher .vertical-bar:nth-child(1) {
+    background-image: linear-gradient(180deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.01) 82%);
+    width: 12.5%;
+    left: 6.5%;
+}
+
+.teacher .vertical-bar:nth-child(2) {
+    background-image: linear-gradient(180deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.01) 69%);
+    width: 9%;
+    left: 19%;
+}
+
+.teacher .vertical-bar:nth-child(3) {
+    background-image: linear-gradient(180deg, rgba(255,255,255,0.20) 0%, rgba(255,255,255,0.01) 82%);
+    width: 12.5%;
+    left: 35%;
+}
+
+.teacher .vertical-bar:nth-child(4) {
+    transform: scaleY(-1);
+    background-image: linear-gradient(180deg, rgba(255,255,255,0.20) 0%, rgba(255,255,255,0.01) 82%);
+    width: 12.5%;
+    left: 79%;
+}
+
+.parent {
+    background-image: linear-gradient(0deg, #00DE8D 1%, #00C325 100%);
+}
+
+.parent .wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.parent .background {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("./assets/images/家长端底纹@1x.png");
+    background-size: 100%;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.student {
+    background-image: linear-gradient(0deg, #FFD70F 0%, #FE8C1B 100%);
+}
+
+.student .circle {
+    border-radius: 50%;
+    position: absolute;
+}
+
+/* .teacher .product {
+    margin-bottom: 50px;
+} */
+.main .title-wrapper {
+    margin-top: 100px;
+}
+
+.title-wrapper .title {
+    opacity: 0.9;
+    font-family: PingFangSC-Semibold;
+    font-size: 4rem;
+    color: #FFFFFF;
+    letter-spacing: 0;
+}
+
+.title-wrapper .subtitle {
+    opacity: 0.85;
+    font-family: PingFangSC-Medium;
+    color: #FFFFFF;
+    letter-spacing: 0;
+}
+
+.tmp {
+    margin-top: 60px;
+    margin-bottom: 42px;
+}
+
+.tmp img {
+    width: 46.8vw;
+    max-height: 40vh;
+}
+
+.qrcode {
+    display: inline-block;
+}
+
+.qrcode .left, .qrcode .right {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.qrcode button {
+    width: 124px;
+    border-radius: 22px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.product {
+    display: inline-block;
+    position: relative;
+}
+
+.product img {
+    height: 50vh;
+    max-width: 360px;
+    max-height: 625px;
+}
+
+.teacher .product img {
+    max-width: 421px;
+    max-height: 542px;
+}
+
+.badge-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.product .badge {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-size: 1rem;
+    line-height: 2rem;
+    position: absolute;
+}
+
+.product .badge:nth-child(1) {
+    background: #69E70C;
+    left: -6rem;
+    top: 10%;
+}
+
+.product .badge:nth-child(2) {
+    background: #E70B66;
+    right: -5rem;
+    top: 20%;
+}
+
+.product .badge:nth-child(3) {
+    background: #FF9833;
+    left: -4rem;
+    top: 35%;
+}
+
+.product .badge:nth-child(4) {
+    background: #4AC67C;
+    right: -5rem;
+    top: 50%;
+}
+
+.product .badge:nth-child(5) {
+    background: #10C8E7;
+    left: -5rem;
+    top: 70%;
+}
+
+.nav {
+    text-align: center;
+    justify-content: center;
+    /* margin-top: -100px; */
+    height: 100px;
+}
+
+.nav .btn {
+    width: 6.75rem;
+    height: 3rem;
+    opacity: 0.9;
+    background: #03002D;
+    border-radius: 1.5rem;
+
+    font-family: PingFangSC-Medium;
+    font-size: 1.3rem;
+    color: #FFFFFF;
+}
+
+.nav.new {
+    margin-top: 0;
+}
+
+.nav.new .btn {
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
+    font-size: 1.125rem;
+    background: #002908;
+    opacity: 0.5;
+    letter-spacing: -0.3px;
+}
+
+.nav.new .btn.active {
+    font-size: 1.5rem;
+    color: #21EA9D;
+    opacity: 0.9;
+    height: 3.875rem;
+}
+
+.nav.new .btn.active:first-child {
+    color: #05BCF8;;
+}
+
+.nav.new .btn.active:last-child {
+    color: #FFD510;
+}
+
+.down-guide {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    margin-left: -16px;
+}
+
+.down-guide button {
+    width: 32px;
+    height: 32px;
+    background-image: url("./assets/images/down_guide.png");
+    animation: down_guide_move 1s linear infinite;
+}
+
+@media (max-width: 575.98px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    .title-wrapper .title {
+        font-size: 3.2rem;
+    }
+    .product img, .teacher .product img {
+        max-width: 280px;
+    }
+
+    .tmp {
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+    .tmp img {
+        width: 80vw;
+        max-height: 40vh;
+    }
+}
+
+
+@media (min-width: 576px) and (max-width: 1199.98px) {
+    .title {
+        font-size: 4rem;
+    }
+}
+
+@keyframes down_guide_move {
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(5px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    75% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
