@@ -74,7 +74,7 @@
             </div>
 
             <div class="down-guide">
-                <button type="button" class="btn btn-link" onclick="moveDown()">
+                <button type="button" class="btn btn-link">
                 </button>
             </div>
         </div>
@@ -106,7 +106,7 @@
                 </div>
             </div>
             <div class="down-guide">
-                <button type="button" class="btn btn-link" onclick="moveDown()">
+                <button type="button" class="btn btn-link">
                 </button>
             </div>
         </div>
@@ -244,12 +244,11 @@
                 anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
                 menu: '#myMenu'
             });
+            $('.down-guide button').on('click', function () {
+                $.fn.pagepiling.moveSectionDown();
+            })
         });
 
-        function moveDown () {
-            console.log(247)
-            $.fn.pagepiling.moveSectionDown();
-        }
     </script>
 </body>
 </html>

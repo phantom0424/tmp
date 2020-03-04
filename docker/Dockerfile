@@ -4,7 +4,7 @@ WORKDIR /usr/src/app
 COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "yarn.lock", ".npmrc", "./"]
 RUN npm install
 COPY . .
-RUN npm run build && sed -i 's/relativepath/./g' dist/*.html
+RUN npm run build && sed -i 's/relativepath/./g' dist/*.html dist/*.css
 
 FROM httpd:2.4
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
